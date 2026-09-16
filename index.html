@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff5fb" />
+  <meta name="description" content="A little birthday surprise for my wonderful sister." />
+  <title>Happy Birthday, Sis!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="cursor-heart" aria-hidden="true">♥</div>
+  <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+
+  <main id="surprise" aria-live="polite">
+    <section class="hero section-shell" id="welcome">
+      <div class="hero-glow"></div>
+      <div class="balloon balloon-pink"></div><div class="balloon balloon-blue"></div><div class="balloon balloon-lavender"></div>
+      <div class="sparkle sparkle-one">✦</div><div class="sparkle sparkle-two">✧</div><div class="sparkle sparkle-three">✦</div>
+      <div class="hero-content">
+        <p class="eyebrow">A tiny surprise, made with huge love</p>
+        <h1>Happy<br /><em>Birthday,</em> Sis!</h1>
+        <p class="hero-subtitle">Today is all about celebrating the wonderful, funny, beautiful you.</p>
+        <button class="primary-btn pulse-btn" id="openSurprise">Open your surprise <span>→</span></button>
+        <p class="scroll-hint">tap to begin · scroll to explore</p>
+      </div>
+      <div class="cake-sticker" aria-hidden="true">🎂</div>
+    </section>
+
+    <div id="contentSections" class="content-sections is-hidden">
+      <section class="letter section-shell" id="letter">
+        <div class="section-kicker">01 · a letter for you</div>
+        <div class="letter-card">
+          <div class="card-flower">✿</div>
+          <h2>For my favorite person</h2>
+          <!-- EDIT YOUR BIRTHDAY MESSAGE HERE. Keep the text inside the #birthdayMessage element. -->
+          <p id="birthdayMessage" class="typewriter-text">Happy birthday to the sweetest sister anyone could ask for. Thank you for being my safe place, my biggest cheerleader, and my favorite person to laugh with. I hope this year brings you every soft, sparkling, wonderful thing you deserve. Keep shining exactly as you are — the world is luckier with you in it.</p>
+          <div class="signature">With all my love, <span>♡</span></div>
+        </div>
+      </section>
+
+      <section class="memories section-shell" id="memories">
+        <div class="section-heading"><div><div class="section-kicker">02 · little moments</div><h2>Our memory lane</h2></div><span class="heading-note">tap a photo to peek closer</span></div>
+        <div class="gallery">
+          <!-- REPLACE PHOTOS: swap these files in the /images folder. Keep the filenames or update the src paths below. -->
+          <button class="photo photo-tall" data-image="images/sister1.svg" data-caption="The best kind of ordinary day"><img src="images/sister1.svg" alt="Placeholder memory one" /></button>
+          <button class="photo" data-image="images/sister2.svg" data-caption="Laughs that last forever"><img src="images/sister2.svg" alt="Placeholder memory two" /></button>
+          <button class="photo" data-image="images/memory1.svg" data-caption="Making memories, one adventure at a time"><img src="images/memory1.svg" alt="Placeholder memory three" /></button>
+          <button class="photo photo-wide" data-image="images/memory2.svg" data-caption="My favorite teammate"><img src="images/memory2.svg" alt="Placeholder memory four" /></button>
+        </div>
+      </section>
+
+      <section class="choices section-shell" id="plans">
+        <div class="section-heading centered"><div><div class="section-kicker">03 · your perfect day</div><h2>Pick our birthday plan</h2><p>Whatever you choose, I’m in.</p></div></div>
+        <div class="choice-grid" id="activityOptions">
+          <!-- EDIT ACTIVITY OPTIONS HERE: duplicate or edit a .choice-card and its data-value/text. -->
+          <button class="choice-card" data-value="Shopping"><span>🛍️</span><b>Shopping</b><small>retail therapy</small></button>
+          <button class="choice-card" data-value="Long Trip"><span>🚗</span><b>Long Trip</b><small>let’s get lost</small></button>
+          <button class="choice-card" data-value="Short Trip"><span>🌷</span><b>Short Trip</b><small>tiny adventure</small></button>
+          <button class="choice-card" data-value="Movie Day"><span>🎬</span><b>Movie Day</b><small>snacks included</small></button>
+          <button class="choice-card" data-value="Other"><span>💭</span><b>Other</b><small>your call</small></button>
+        </div>
+        <div class="choice-divider"><span>and let’s eat…</span></div>
+        <div class="choice-grid food-grid" id="foodOptions">
+          <!-- EDIT FOOD OPTIONS HERE: vegetarian choices can be edited in the cards below. -->
+          <button class="choice-card" data-value="Pizza"><span>🍕</span><b>Pizza</b><small>extra cheese</small></button>
+          <button class="choice-card" data-value="Burger King Veg Options"><span>🍔</span><b>BK Veg</b><small>crispy & fun</small></button>
+          <button class="choice-card" data-value="Homemade Food"><span>🍲</span><b>Homemade</b><small>made with love</small></button>
+          <button class="choice-card" data-value="Ice Cream"><span>🍦</span><b>Ice Cream</b><small>always room</small></button>
+          <button class="choice-card" data-value="Other"><span>✨</span><b>Other</b><small>surprise me</small></button>
+        </div>
+        <p class="selection-note" id="selectionNote">Choose one from each row ✨</p>
+      </section>
+
+      <section class="cake-section section-shell" id="cake">
+        <div class="cake-copy"><div class="section-kicker">04 · make a wish</div><h2>A cake just for you</h2><p>Tap the candles to make your wish, then blow them out!</p></div>
+        <div class="cake-wrap" id="cakeWrap" role="button" tabindex="0" aria-label="Blow out the birthday candles">
+          <div class="flames"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="candles"><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="cake-top"><span>happy</span></div><div class="cake-body"></div><div class="cake-plate"></div>
+        </div>
+        <button class="secondary-btn" id="blowButton">Blow out the candles <span>→</span></button>
+        <p class="wish-message" id="wishMessage">Close your eyes… make it a good one.</p>
+      </section>
+
+      <section class="finale section-shell" id="finale">
+        <canvas id="fireworks" aria-hidden="true"></canvas>
+        <div class="heart-rain" id="heartRain" aria-hidden="true"></div>
+        <div class="finale-content"><div class="finale-sparkle">✦</div><div class="section-kicker">05 · one last thing</div><h2>I love you,<br /><em>Sis.</em></h2><p>Here’s to another year of being completely unforgettable.</p><button class="primary-btn" id="replayButton">Replay the magic ↻</button></div>
+      </section>
+    </div>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Expanded memory photo"><button class="close-lightbox" id="closeLightbox" aria-label="Close photo">×</button><img id="lightboxImage" src="" alt="" /><p id="lightboxCaption"></p></div>
+  <script src="script.js"></script>
+</body>
+</html>
